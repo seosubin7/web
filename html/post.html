@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>고객센터</title>
+  <link rel="stylesheet" href="../css/post.css">
+  <link rel="stylesheet" href="../css/basic.css">
+
+</head>
+<body>
+  <header>
+    <div class="logo" onclick="goToMain()">
+      <h1>SoSu</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">홈</a></li>
+        <li class="separator"></li>
+        <li><a href="search.html">영화 찾기</a></li>
+        <li class="separator"></li>
+        <li><a href="co.html">커뮤니티</a></li>
+        <li class="separator"></li>
+        <li><a href="service.html">고객센터</a></li>
+      </ul>
+    </nav>
+    <div class="user" id="userSection" style="display: none;">
+      <span id="welcome-user"></span><span id="logout-link"> | <a href="#" onclick="logout()">로그아웃</a></span>
+    </div>
+    <div class="user" id="logoutSection">
+      <span id="login-message" style="display: none;">로그인이 필요합니다.</span>
+      <a href="login.html">로그인</a> | <a href="register.html">회원가입</a>
+    </div>
+  </header>
+  <div class="container">
+    <main class="main">
+<div class="container post-form" id="postForm">
+  <form id="notice_form" name="notice_form" method="post">
+    <div class="textarea-wrapper">
+      <div class="formatted-title">
+          <h2>욕설의 기준이 뭔가요?</h2>
+      </div>
+      <div class="divider"></div>
+      <div class="formatted-list">
+        <ul>
+          <br>
+          <li>비속어, 저속하거나 외설적인 표현, 혐오적인 언어 등은 욕설로 간주될 수 있습니다.</li>
+          <br>
+          <br>
+          <li>다른 사용자를 모욕하거나 비방하는 내용은 욕설로 간주될 수 있습니다.</li>
+          <br>
+          <br>
+          <li>음란물이나 선정적인 내용을 포함하는 표현, 그래픽, 사진, 링크 등은 욕설로 간주될 수 있습니다.</li>
+          <br>
+          <br>
+          <li>법률, 저작권, 개인정보 보호 등의 규정을 위반하는 행위는욕설로 간주될 수 있습니다.</li>
+          <br>
+          <br>
+          <li>특정 인종, 성별, 성적 지향, 종교, 출신 등에 대한 혐오 발언이나 차별적인 표현은 욕설로 간주됩니다.</li>
+          <br>
+          <br>
+        </ul>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="content-aside">
+      <div class="wrap_btn">
+        <button onclick="goToFaqPage(event)">뒤로가기</button>
+      </div>
+    </div>
+  </form>
+</div>
+</main>
+</div>
+		</div>
+		<footer>
+			<div class="footer-section">
+				<h3>Sosu 소개</h3>
+				<p>"Sosu"는 영화를 사랑하는 사람들을 위한 특별한 공간입니다.</p>
+				<p>다양한 영화 추천을 제공하여 당신의 영화 관람 경험을 한층 더 풍부하고 흥미로운 것으로 만들기를 원합니다.</p>
+				<p>영화를 사랑하는 당신을 위해 "Sosu"에서 특별한 영화 추천을 경험해보세요.</p>
+				<p></p>
+			</div>
+			<div class="footer-section">
+				<div class="footer-main">
+					<h3>제작자 소개</h3>
+				</div>
+				<div class="footer-names">
+					<div class="footer-so">
+						<p>이름: 박소정</p>
+						<p>학번: 20210030</p>
+						<p>E-mail: 01duqrl@naver.com</p>
+					</div>
+					<div class="footer-su">
+						<p>이름: 서수빈</p>
+						<p>학번: 20214313</p>
+						<p>E-mail: tnqls8465@naver.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/post.js"></script>
+</body>
+</html>
+
+

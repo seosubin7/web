@@ -1,0 +1,277 @@
+.container {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sidebar {
+  background-color: #f2f2f2;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar h2 {
+margin-top: 0;
+font-size: 20px;
+margin-bottom: 10px;
+}
+
+.sidebar ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.sidebar li {
+margin-bottom: 10px;
+}
+
+.sidebar li a {
+display: block;
+text-decoration: none;
+padding: 10px;
+color: #333;
+font-weight: bold;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+font-size: 20px;
+}
+
+.sidebar li a:hover {
+background-color: #333;
+color: #fff;
+}
+
+main {
+  flex: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 90%;
+  padding: 20px;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 5%;
+  background-image: url("../images/5.png");
+  background-size: cover;
+}
+
+.content button:hover {
+  background-color: #666;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+input[type="submit"] {
+background-color: #333;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+#contact form{
+  padding: 4%;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  background-color: #f1f1f1;
+}
+
+#contact label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact select,
+#contact textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px groove #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#contact textarea {
+  height: 150px;
+}
+
+#contact input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+}
+
+section {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 7%;
+  margin-top: 2%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  
+}
+
+.table td, 
+.table th {
+  line-height: 50px;
+}
+
+.thead {
+  background-color: #696969;
+  color: #fff;
+}
+.tbody {
+  background-color: #ffffff;
+}
+
+.thead th {
+  padding: 10px;
+  text-align: left;
+}
+
+.thead th:nth-child(2) {
+  width: 50%;
+}
+
+.thead th:nth-child(4) {
+  width: 20%;
+}
+.thead th:nth-child(3), 
+.thead th:nth-child(1),
+.thead th:nth-child(5) {
+  width: 10%;
+}
+
+.tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.page-wrap {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.page-nation li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.page-nation li a {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #f1f1f1;
+  color: #333;
+  text-decoration: none;
+}
+
+.page-nation li a:hover {
+  background-color: #ccc;
+}
+
+.create-button {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.create-button a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.create-button a:hover {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.parent-container {
+  display: flex;
+  justify-content: space-between; /* 자식 요소 사이에 동일한 간격을 두도록 설정 */
+  align-items: center;
+  height: 100%;
+}
+
+.search-container form {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input {
+  margin-right: 10px;
+  height: 10%;
+  width: 100%;
+}
+
+.create-button {
+  margin-left: 10px; /* 오른쪽 요소와 간격을 두기 위해 왼쪽 여백을 추가합니다 */
+}
+
+#faq-searchInput {
+  height: 20px;
+  margin-bottom: 10px;
+  width: 120%;
+}
+
+#notice-searchInput {
+  height: 20px;
+  margin-bottom: 10px;
+  width: 120%;
+}
+
+.page-wrap button {
+  font-size: 18px;
+  margin-right: 2%;
+  padding: 10px 20px;
+  border: none;
+  background-color: #f1f1f1;
+  color: #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.page-wrap button:hover {
+  background-color: #8a8989;
+}
+
+a {
+  text-decoration: none; /* 하이퍼링크의 밑줄 제거 */
+  color: black;
+}
+

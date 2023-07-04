@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../CSS/register.css">
+  </head>
+<body>
+  <div class="logo">
+    <a href="../index.html">
+      <h1>Sosu</h1>
+    </a>
+  </div>
+  <div class="container">
+    <div class="form-wrapper">
+      <form action="login.html">
+        <legend>
+          <label for="user_id">아이디<input type="text" id="user_id" required></label>
+          <br>
+          <label for="user_pw">비밀번호<input type="password" id="user_pw" required></label>
+          <br>
+          <label for="user_name">이름<input type="text" id="user_name" required></label>
+          <br>
+          <label for="user_email">이메일<input type="email" id="user_email" required></label>
+          <br>
+          <label for="user_tel">전화번호<input type="tel" id="user_tel" required></label>
+          <br>
+          <label for="user_birth">생년월일<input type="date" id="user_birth" required></label>
+          <br>
+        </legend>
+        <div class="button-wrapper">
+          <form action="login.html">
+            <input type="submit" value="회원가입">
+          </form>
+          <form action="main.html">
+            <input type="button" value="취소" onclick="location.href='../index.html'">
+          </form>
+        </div>
+      </form>
+    </div>
+  </div>   
+</body>
+</html>
+

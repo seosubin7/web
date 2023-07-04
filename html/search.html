@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 찾기</title>
+    <link rel="stylesheet" type="text/css" href="../css/basic.css">
+    <link rel="stylesheet" type="text/css" href="../css/search.css">
+</head>
+<body>
+    <header>
+        <div class="logo" onclick="goToMain()">
+          <h1>SoSu</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="../index.html">홈</a></li>
+            <li class="separator"></li>
+            <li><a href="search.html">영화 찾기</a></li>
+            <li class="separator"></li>
+            <li><a href="co.html">커뮤니티</a></li>
+            <li class="separator"></li>
+            <li><a href="service.html">고객센터</a></li>
+          </ul>
+        </nav>
+        <div class="user" id="userSection" style="display: none;">
+          <span id="welcome-user"></span><span id="logout-link"> | <a href="#" onclick="logout()">로그아웃</a></span>
+        </div>
+        <div class="user" id="logoutSection">
+          <span id="login-message" style="display: none;">로그인이 필요합니다.</span>
+          <a href="login.html">로그인</a> | <a href="register.html">회원가입</a>
+        </div>
+      </header>
+	  <div class="container">
+      <div class="sidebar">
+        <ul>
+          <li><a href="#" onclick="showContent('moviecontent'); resetgenreTitle();">장르별</a></li>
+          <li><a href="#" onclick="showContent('koreacontent'); resetkoreaTitle();">국가별</a></li>
+        </ul>
+      </div>
+      
+		<main class="main">
+			<div id="moviecontent" class="content">
+			  <div id="genre-title">
+          <h2>장르별</h2>
+        </div>
+			  <div>
+				<button id="comedy-button">코미디</button>
+				<button id="action-button">액션</button>
+				<button id="romance-button">로맨스</button>
+				<button id="thriller-button">스릴러</button>
+				<button id="animation-button">애니메이션</button>
+				<button id="musical-button">뮤지컬</button>
+			  </div>
+			  <!-- 코미디 -->
+			  <div id="comedy" class="movie-content" style="display: none;">
+          <div class="image-container">
+            <div class="caption">Best</div>
+            <img id="comedySlideImage" alt="영화 이미지">
+          </div>
+          <h1>영화찾기</h1>
+          <div class="searchBox">
+            <label>제목: <input type="text" id="comedysearch" onkeyup="filterMovies('comedy')" 
+              placeholder="영화 제목을 검색하세요." /></label>
+          </div>
+          <table class="image-table" id="comedyTable"></table>
+        </div>
+<!-- 액션 -->
+<div id="action" class="movie-content" style="display: none;">
+  <div class="image-container">
+    <div class="caption">Best</div>
+    <img id="actionSlideImage" alt="영화 이미지">
+  </div>
+  <h1>영화찾기</h1>
+  <div class="searchBox">
+    <label>제목: <input type="text" id="actionsearch" onkeyup="filterMovies('action')" 
+      placeholder="영화 제목을 검색하세요." /></label>
+  </div>
+  <table class="image-table" id="actionTable"></table>
+</div>
+  <!-- 로맨스 -->
+  <div id="romance" class="movie-content" style="display: none;">
+    <div class="image-container">
+      <div class="caption">Best</div>
+      <img id="romanceSlideImage" alt="영화 이미지">
+    </div>
+    <h1>영화찾기</h1>
+    <div class="searchBox">
+      <label>제목: <input type="text" id="romancesearch" onkeyup="filterMovies('romance')" placeholder="영화 제목을 검색하세요." /></label>
+    </div>
+    <table class="image-table" id="romanceTable"></table>
+  </div>
+  <!-- 스릴러 -->
+  <div id="thriller" class="movie-content" style="display: none;">
+    <div class="image-container">
+      <div class="caption">Best</div>
+      <img id="thrillerSlideImage" alt="영화 이미지">
+    </div>
+    <h1>영화찾기</h1>
+    <div class="searchBox">
+      <label>제목: <input type="text" id="thrillersearch" onkeyup="filterMovies('thriller')" placeholder="영화 제목을 검색하세요." /></label>
+    </div>
+    <table class="image-table" id="thrillerTable"></table>
+  </div>
+  <!-- 애니메이션 -->
+  <div id="animation" class="movie-content" style="display: none;">
+    <div class="image-container">
+      <div class="caption">Best</div>
+      <img id="animationSlideImage" alt="영화 이미지">
+    </div>
+    <h1>영화찾기</h1>
+    <div class="searchBox">
+      <label>제목: <input type="text" id="animationsearch" onkeyup="filterMovies('animation')" placeholder="영화 제목을 검색하세요." /></label>
+    </div>
+    <table class="image-table" id="animationTable"></table>
+  </div>
+  <!-- 뮤지컬 -->
+  <div id="musical" class="movie-content" style="display: none;">
+    <div class="image-container">
+      <div class="caption">Best</div>
+      <img id="musicalSlideImage" alt="영화 이미지">
+    </div>
+    <h1>영화찾기</h1>
+    <div class="searchBox">
+      <label>제목: <input type="text" id="musicalsearch" onkeyup="filterMovies('musical')" placeholder="영화 제목을 검색하세요." /></label>
+    </div>
+    <table class="image-table" id="musicalTable"></table>
+  </div>
+</div>
+
+<div id="koreacontent" class="content">
+  <div id="korea-title">
+    <h2>국가별</h2>
+  </div>
+  <div>
+    <button id="korean-button">국내</button>
+    <button id="unkorean-button">국외</button>
+  </div>
+  <!-- 국내 -->
+  <div id="korea" class="movie-content" style="display: none;">
+    <div class="image-container">
+      <div class="caption">Best</div>
+      <img id="koreaSlideImage" alt="영화 이미지">
+    </div>
+    <h1>영화찾기</h1>
+    <div class="searchBox">
+      <label>제목: <input type="text" id="koreasearch" onkeyup="filterMovies('korea')" 
+        placeholder="영화 제목을 검색하세요." /></label>
+    </div>
+    <table class="image-table" id="koreaTable"></table>
+  </div>
+    <!-- 국외 -->
+    <div id="unkorea" class="movie-content" style="display: none;">
+      <div class="image-container">
+        <div class="caption">Best</div>
+        <img id="unkoreaSlideImage" alt="영화 이미지">
+      </div>
+      <h1>영화찾기</h1>
+      <div class="searchBox">
+        <label>제목: <input type="text" id="unkoreasearch" onkeyup="filterMovies('unkorea')" 
+          placeholder="영화 제목을 검색하세요." /></label>
+      </div>
+      <table class="image-table" id="unkoreaTable"></table>
+    </div>
+    </div>
+    <div id="movieInfo" class="movie-info" style="display: none;">
+      <h1 id="movieTitle"></h1>
+      <img id="movieImage" alt="Movie Image">
+      <p><strong>추 천</strong> <span id="moviegood"></span></p>
+      <p><strong>개요</strong> <span id="movieSummary"></span></p>
+      <p><strong>평점</strong> <span id="movieRating"></span></p>
+      <p><strong>관객수</strong> <span id="movieAudience"></span></p>
+      <h3 onclick="expandText()">영화 내용</h3>
+      <p id="expandedText" class="expanded-text"></p>
+  </div>
+  </main>
+ 
+</div> 
+<footer>
+  <div class="footer-section">
+    <h3>Sosu 소개</h3>
+    <p>"Sosu"는 영화를 사랑하는 사람들을 위한 특별한 공간입니다. </p>
+    <p> 다양한 영화 추천을 제공하여 당신의 영화 관람 경험을 한층 더 풍부하고 흥미로운 것으로 만들기를 원합니다.</p>
+    <p>영화를 사랑하는 당신을 위해 "Sosu"에서 특별한 영화 추천을 경험해보세요.</p>
+    <p></p>
+  </div>
+  <div class="footer-section">
+    <div class="footer-main">
+      <h3>제작자 소개</h3>
+    </div>
+    <div class="footer-names">
+      <div class="footer-so">
+        <p>이름: 박소정</p>
+        <p>학번: 20210030</p>
+        <p>E-mail: 01duqrl@naver.com</p>
+      </div>
+      <div class="footer-su">
+        <p>이름: 서수빈</p>
+        <p>학번: 20214313</p>
+        <p>E-mail: tnqls8465@naver.com</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../js/search.js"></script>
+</body>
+</html>
+

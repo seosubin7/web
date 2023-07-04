@@ -1,0 +1,91 @@
+main {
+  padding: 20px;
+  padding-bottom: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../images/5.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center; /* Add this line */
+  align-items: center; /* Add this line */
+}
+
+.label,
+.input,
+.textarea {
+  display: block;
+  margin-bottom: 10px;
+}
+
+button[type="submit"] {
+  display: block;
+}
+
+.container.post-form button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #aa8ead;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container.post-form button:last-child {
+  margin-right: 0;
+}
+
+.divider {
+  margin: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.content-aside {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+h2 {
+  font-weight: normal;
+  text-align: left;
+}
+
+.formatted-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 25px;
+  width: 100%;
+}
+
+.formatted-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 3%;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 20px;
+  margin-left: auto;
+  margin-left: auto;
+}
+
+.textarea-wrapper {
+  margin: 10%;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+a {
+  text-decoration: none; /* 하이퍼링크의 밑줄 제거 */
+  color: black;
+}
+

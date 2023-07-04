@@ -1,0 +1,94 @@
+body {
+  background-color: #f9f9f9;
+  font-family: 'Noto Sans KR', sans-serif;
+ background-image: url("../images/background.jpg");
+  background-size: cover;
+}
+.logo {
+  text-align: center;
+  margin: 150px 0 30px;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo h1 {
+  font-size: 48px;
+  color: #fff;
+  margin: 0;
+}
+
+.container {
+  border: none;
+  border-radius: 35px;
+  background-color: #fff;
+  padding: 4%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #666;
+}
+
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=tel],
+input[type=email],
+input[type=date] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.button-wrapper {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  margin-left: 50%; /* 오른쪽 정렬 */
+}
+
+.button-wrapper input[type=submit] {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4d3548;
+  color: white;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-left: auto; /* 왼쪽 마진을 자동으로 설정 */
+  margin-right: 10px; /* 오른쪽 마진을 10px로 설정 */
+}
+
+.button-wrapper input[type=button] {
+  padding: 10px 35px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4d3548;
+  color: white;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.button-wrapper input[type=submit]:hover,
+.button-wrapper input[type=button]:hover {
+  background-color: #222;
+}
+.button-wrapper input[type=submit] {
+  width: auto; /* 너비를 자동으로 설정 */
+}
+

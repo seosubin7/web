@@ -1,0 +1,121 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color:#423e45;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 36px;
+  color: #fff;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li.separator {
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #000; /* 핑크색 혹은 다른 원하는 색상으로 변경해주세요 */
+}
+
+.separator {
+  margin: 0 12px 0 3px;
+  height: 28px;
+  vertical-align: middle;
+  margin: 0 10px;
+  border-right: 1px solid #fff;
+}
+
+.user,
+.user span,
+.user a {
+  color: #fff;
+}
+
+footer {
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-sections {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.footer-section {
+  width: 45%;
+  padding: 1.0%;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.footer-names {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-so,
+.footer-su {
+  width: 45%;
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.footer-so p,
+.footer-su p {
+  margin: 5px 0;
+}
+
+.footer-so p,
+.footer-su p {
+  color: #333;
+}
+
+
+header a {
+  text-decoration: none;
+}
+

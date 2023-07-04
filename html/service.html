@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>고객센터</title>
+  <link rel="stylesheet" href="../css/service.css">
+  <link rel="stylesheet" href="../css/basic.css">
+</head>
+<body>
+  <header>
+    <div class="logo" onclick="goToMain()">
+      <h1>SoSu</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">홈</a></li>
+        <li class="separator"></li>
+        <li><a href="search.html">영화 찾기</a></li>
+        <li class="separator"></li>
+        <li><a href="co.html">커뮤니티</a></li>
+        <li class="separator"></li>
+        <li><a href="service.html">고객센터</a></li>
+      </ul>
+    </nav>
+    <div class="user" id="userSection" style="display: none;">
+      <span id="welcome-user"></span><span id="logout-link"> | <a href="#" onclick="logout()">로그아웃</a></span>
+    </div>
+    <div class="user" id="logoutSection">
+      <span id="login-message" style="display: none;">로그인이 필요합니다.</span>
+      <a href="login.html">로그인</a> | <a href="register.html">회원가입</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <ul>
+        <li><a href="#contact" id="contactButton">문의하기</a></li>
+        <li><a href="#faq" id="faqButton">자주 묻는 질문</a></li>
+        <li><a href="#notice" id="noticeButton">공지사항</a></li>
+      </ul>
+    </div>
+    <main class="main">
+      <section id="contact">
+        <h2>문의하기</h2>
+        <form id="contact-form">
+          <label for="name">이름</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">이메일</label>
+          <input type="email" id="email" name="email" required>
+          <label for="subject">문의 유형</label>
+          <select id="subject" name="subject" required>
+            <option value="general">일반 문의</option>
+            <option value="technical">기술적 문제</option>
+            <option value="billing">청구 관련 문의</option>
+            <option value="partnership">제휴 및 제안</option>
+            <option value="others">기타 문의</option>
+          </select>
+          <label for="message">문의 내용</label>
+          <textarea id="message" name="message" required></textarea>
+          <input type="submit" value="보내기" onclick="submitForm()">
+        </form>
+      </section>
+      <section class="faq">
+        <h2>자주 묻는 질문</h2>
+				<form id="faq-form">
+				<div class="board">
+				<table class="table">
+				<thead class="thead">
+				<tr>
+				<th>번호</th>
+				<th>제목</th>
+				<th>글쓴이</th>
+				<th>작성일</th>
+				<th>조회수</th>
+				</tr>
+				</thead>
+				<tbody class="tbody" id="faq-tableBody">
+				</tbody>
+				</table>
+				<div class="page-wrap">
+				<ul class="page-nation" id="faq-pagination">
+				</ul>
+				</div>
+				</div>
+				</form>
+				</section>
+				<section class="notice">
+					<h2>공지사항</h2>
+					<form id="notice-form">
+						<div class="board">
+							<table class="table">
+								<thead class="thead">
+									<tr>
+										<th>번호</th>
+										<th>제목</th>
+										<th>글쓴이</th>
+										<th>작성일</th>
+										<th>조회수</th>
+									</tr>
+								</thead>
+								<tbody class="tbody" id="notice-tableBody">
+								</tbody>
+							</table>
+							<div class="page-wrap">
+								<ul class="page-nation" id="notice-pagination">
+								</ul>
+							</div>
+						</div>
+					</form>
+					</section>
+				</div>
+			</main>
+		</div>
+		<footer>
+			<div class="footer-section">
+				<h3>Sosu 소개</h3>
+				<p>"Sosu"는 영화를 사랑하는 사람들을 위한 특별한 공간입니다.</p>
+				<p>다양한 영화 추천을 제공하여 당신의 영화 관람 경험을 한층 더 풍부하고 흥미로운 것으로 만들기를 원합니다.</p>
+				<p>영화를 사랑하는 당신을 위해 "Sosu"에서 특별한 영화 추천을 경험해보세요.</p>
+				<p></p>
+			</div>
+			<div class="footer-section">
+				<div class="footer-main">
+					<h3>제작자 소개</h3>
+				</div>
+				<div class="footer-names">
+					<div class="footer-so">
+						<p>이름: 박소정</p>
+						<p>학번: 20210030</p>
+						<p>E-mail: 01duqrl@naver.com</p>
+					</div>
+					<div class="footer-su">
+						<p>이름: 서수빈</p>
+						<p>학번: 20214313</p>
+						<p>E-mail: tnqls8465@naver.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/service.js"></script>
+</body>
+</html>

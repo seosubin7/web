@@ -1,0 +1,90 @@
+body {
+  background-color: #f9f9f9;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+}
+.logo {
+ text-align: center;
+  margin: 150px 0 30px;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo h1 {
+  font-size: 48px;
+  color: #fff;
+  margin: 0;
+}
+
+fieldset {
+  border: none;
+  border-radius: 35px;
+  background-color: #fff;
+  padding: 80px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 20%;
+  margin: 0 auto;
+  position: relative;   
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #666;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+
+input[type="submit"], a.btn {
+  display: block;
+  width: 100%;
+  margin: 20px auto 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #4d3548;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+input[type="submit"]:hover, a.btn:hover {
+  background-color: #222;
+}
+
+.register-link {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  font-size: 14px;
+  color: #666;
+}
+.register-link a {
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+  padding-bottom: 2px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.warning {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}

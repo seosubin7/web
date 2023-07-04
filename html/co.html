@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커뮤니티 페이지</title>
+    <link rel="stylesheet" type="text/css" href="../css/basic.css">
+    <link rel="stylesheet" type="text/css" href="../css/co.css">
+</head>
+<body>
+    <header>
+        <div class="logo" onclick="goToMain()">
+          <h1>SoSu</h1>
+        </div>
+        <nav>
+            <ul>
+              <li><a href="../index.html">홈</a></li>
+              <li class="separator"></li>
+              <li><a href="search.html">영화 찾기</a></li>
+              <li class="separator"></li>
+              <li><a href="co.html">커뮤니티</a></li>
+              <li class="separator"></li>
+              <li><a href="service.html">고객센터</a></li>
+            </ul>
+          </nav>
+          <div class="user" id="userSection" style="display: none;">
+            <span id="welcome-user"></span><span id="logout-link"> | <a href="#" onclick="logout()">로그아웃</a></span>
+          </div>
+          <div class="user" id="logoutSection">
+            <span id="login-message" style="display: none;">로그인이 필요합니다.</span>
+            <a href="login.html">로그인</a> | <a href="register.html">회원가입</a>
+          </div>
+      </header>
+    <main>
+        <h1 class="d-none">커뮤니티</h1>
+        <div class="all-container" id="all-container">
+        <p>이 공간에서 다양한 의견을 자유롭게 생각을 펼치세요.</p>
+        <div class="parent-container">
+            <div class="search-container">
+              <form id="searchForm">
+                <input type="text" id="searchInput" placeholder="검색어를 입력하세요">
+              </form>
+            </div>
+            <div class="create-button">
+              <button onclick="showPostForm()" class="post-button">게시글 작성</button>
+            </div>
+        </div>
+            <div class="board">
+                <table class="table">
+                    <thead class="thead">
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>글쓴이</th>
+                            <th>작성일</th>
+                            <th>조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody" class="tbody">
+                      <!-- 여기에 동적으로 테이블 행이 채워집니다. -->
+                    </tbody>
+                    
+                </table>
+            
+                <div class="page-wrap">
+                    <ul class="page-nation" id="pagination">
+                        <!-- 여기에 동적으로 페이지 링크가 채워집니다. -->
+                    </ul>
+                </div>
+            </div>
+    </div>
+    <div class="container post-form" id="postForm" style="display: none;">
+      <form id="notice_form" name="notice_form" method="post">
+          <input type="hidden" value="" name="mode" id="mode">
+          <select id="select">
+              <option>한국 영화</option>
+              <option>해외 영화</option>
+              <option>애니메이션</option>
+          </select>
+          <div class="post-title">
+              <textarea class="textarea_tit" id="title" placeholder="제목을 입력하세요"></textarea>
+          </div>
+          <div class="divider"></div>
+          <textarea class="textarea_cont" name="content" id="content"></textarea>
+          <div class="divider"></div>
+          <label for="imageFiles" class="file-label">첨부파일 :</label>
+          <input type="file" multiple="multiple" name="imageFiles" class="file-input">
+          <div class="content-aside">
+              <div class="wrap_btn">
+                <button onclick="goToCoPage()">취소</button>
+                  <button id="submitButton">등록</button>
+              </div>
+          </div>
+      </form>
+  </div>
+  <div id="formContainer" style="display: none;">
+    <div id = "formform">
+    <div class="posttitle">
+      <textarea class="post_tit" name="title" id="post_tit" readonly></textarea>
+    </div>
+    <div class="divider"></div>
+    <textarea class="post_cont" name="content" id="post_cont" readonly></textarea>
+    <div class="divider"></div>
+    <div class="buttonclass">
+    <button onclick="goToCoPage()" class="back-button">뒤로가기</button>
+    <button class="deletebutton">삭제</button>
+    </div>
+    <div class="divider"></div>
+    <h2>댓글</h2>
+    <div class="comment-section">
+      <div id="comments">
+        <table id="comment-table">
+          <thead>
+            <tr>
+              <th>내용</th>
+              <th>삭제</th>
+            </tr>
+          </thead>
+          <tbody id="comments-body">
+            <!-- 여기에 동적으로 댓글이 추가됩니다. -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <h3>댓글 작성하기</h3>
+    <div class="comment-input-container">
+      <textarea class="comment-input" placeholder="댓글을 입력하세요"></textarea>
+      <button class="posting-box">댓글 작성</button>
+    </div>
+  </div>
+</div>
+  </main>
+    <footer>
+      <div class="footer-section">
+         <h3>Sosu 소개</h3>
+         <p>"Sosu"는 영화를 사랑하는 사람들을 위한 특별한 공간입니다. </p>
+         <p> 다양한 영화 추천을 제공하여 당신의 영화 관람 경험을 한층 더 풍부하고 흥미로운 것으로 만들기를 원합니다.</p>
+         <p>영화를 사랑하는 당신을 위해 "Sosu"에서 특별한 영화 추천을 경험해보세요.</p>
+         <p></p>
+      </div>
+      <div class="footer-section">
+         <div class="footer-main">
+            <h3>제작자 소개</h3>
+         </div>
+         <div class="footer-names">
+            <div class="footer-so">
+               <p>이름: 박소정</p>
+               <p>학번: 20210030</p>
+               <p>E-mail: 01duqrl@naver.com</p>
+            </div>
+            <div class="footer-su">
+               <p>이름: 서수빈</p>
+               <p>학번: 20214313</p>
+               <p>E-mail: tnqls8465@naver.com</p>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+    <script src="../js/co.js"></script>
+</body>
+</html>
+

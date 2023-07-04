@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>로그인</title>
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+  <div class="logo">
+    <a href="../index.html">
+      <h1>SoSu</h1>
+    </a>
+  </div>
+  <fieldset>
+    <label> <input type="text" name="id" id="id" autocomplete="off" required placeholder="아이디" 
+      onclick="this.placeholder=''" onblur="this.placeholder='아이디'"></label>
+    <label><input type="password" name="pw" id="password" autocomplete="off" required placeholder="비밀번호" 
+      onclick="this.placeholder=''" onblur="this.placeholder='비밀번호'"></label>
+    <input type="submit" value="로그인" onclick="login()">
+    <p class="warning" id="login-warning"></p>
+    <div class="register-link" id="register-link">
+      <a href="register.html">회원가입</a>
+    </div>
+  </fieldset>
+  <script src="../js/login.js"></script>
+</body>
+</html>
+
